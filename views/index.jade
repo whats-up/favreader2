@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  h1=title
+
+  -if(isLogin)
+    p "Welcome"
+      a(href="/signout") Sign out
+  -else
+    p
+      a(href="/auth/twitter") Sign in with
+  p= json
